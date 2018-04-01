@@ -13,7 +13,7 @@ cityUF - EPA city utility factor (share of electricity) for PHEV
 co2 - tailpipe CO2 in grams/mile for fuelType1 (5)
 co2A - tailpipe CO2 in grams/mile for fuelType2 (5)
 co2TailpipeAGpm - tailpipe CO2 in grams/mile for fuelType2 (5)
-co2TailpipeGpm- tailpipe CO2 in grams/mile for fuelType1 (5)
+co2TailpipeGpm - tailpipe CO2 in grams/mile for fuelType1 (5)
 comb08 - combined MPG for fuelType1 (2), (11)
 comb08U - unrounded combined MPG for fuelType1 (2), (3)
 combA08 - combined MPG for fuelType2 (2)
@@ -23,4 +23,4 @@ combinedCD - combined gasoline consumption (gallons/100 miles) in charge depleti
 combinedUF - EPA combined utility factor (share of electricity) for PHEV
 cylinders - engine cylinders
 displ - engine displacement in liters
-drive - drive axle type
+drive - drive axle type 
