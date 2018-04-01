@@ -1,0 +1,26 @@
+atvtype - type of alternative fuel or advanced technology vehicle
+barrels08 - annual petroleum consumption in barrels for fuelType1 (1)
+barrelsA08 - annual petroleum consumption in barrels for fuelType2 (1)
+charge120 - time to charge an electric vehicle in hours at 120 V
+charge240 - time to charge an electric vehicle in hours at 240 V
+city08 - city MPG for fuelType1 (2), (11)
+city08U - unrounded city MPG for fuelType1 (2), (3)
+cityA08 - city MPG for fuelType2 (2)
+cityA08U - unrounded city MPG for fuelType2 (2), (3)
+cityCD - city gasoline consumption (gallons/100 miles) in charge depleting mode (4)
+cityE - city electricity consumption in kw-hrs/100 miles
+cityUF - EPA city utility factor (share of electricity) for PHEV
+co2 - tailpipe CO2 in grams/mile for fuelType1 (5)
+co2A - tailpipe CO2 in grams/mile for fuelType2 (5)
+co2TailpipeAGpm - tailpipe CO2 in grams/mile for fuelType2 (5)
+co2TailpipeGpm- tailpipe CO2 in grams/mile for fuelType1 (5)
+comb08 - combined MPG for fuelType1 (2), (11)
+comb08U - unrounded combined MPG for fuelType1 (2), (3)
+combA08 - combined MPG for fuelType2 (2)
+combA08U - unrounded combined MPG for fuelType2 (2), (3)
+combE - combined electricity consumption in kw-hrs/100 miles
+combinedCD - combined gasoline consumption (gallons/100 miles) in charge depleting mode (4)
+combinedUF - EPA combined utility factor (share of electricity) for PHEV
+cylinders - engine cylinders
+displ - engine displacement in liters
+drive - drive axle type
