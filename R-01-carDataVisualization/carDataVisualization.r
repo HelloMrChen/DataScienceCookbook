@@ -1,9 +1,11 @@
-# install.packages("plyr")
+#本案例的相关技术总结：https://blog.csdn.net/glodon_mr_chen/article/details/79785673
+
+#install.packages("plyr")
 library(plyr)
-# install.packages("ggplot2")
-# install.packages("reshape2")
-# library(ggplot2)
-# library(reshape2)
+#install.packages("ggplot2")
+#install.packages("reshape2")
+library(ggplot2)
+library(reshape2)
 #cmd+shift+c 注释快捷键
 
 
@@ -15,6 +17,7 @@ head(vehicles)
 #给csv中的变量贴上标签
 #这里的空格很重要，防止无拆分连续的字符串，这用到了readline、strsplit、docall、rbind 
 labels<-do.call(rbind,strsplit(readLines("Data/varlabels.txt")," - "))
+
 
 #------数据准备及查看详情
 summary(vehicles)
@@ -99,7 +102,7 @@ ggplot(carsMakes,aes(year,numberofMakers))+geom_point()+labs(x="Year",y="Number 
 
 #九、选出每年制造4缸发动机的厂商，并看这些厂商每年制造的汽车燃油效率如何
 uniqueMakes<-dlply(gasCars4,~year,function(x) unique(x$make))
-commonMakes<-Reduce(intersect,uniqueMakes)
+commonMakes<-Reduce(intersect,uniqueMakes) 
 carsCommonMakes4<-subset(gasCars4,make %in% commonMakes)
 
 #这里按照两个变量进行分组统计，所以分为了

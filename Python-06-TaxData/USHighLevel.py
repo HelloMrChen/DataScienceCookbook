@@ -96,5 +96,46 @@ def average_income(source):
     return linechart([timeseries(source,col)for col in column],labels=column,title="U.S Average Income",
                      ylabel="2008 US Dollars")
 
-average_income(data_file)
-plt.show()
+# average_income(data_file)
+# plt.show()
+
+#堆积图来分析富裕人群
+def stackedarea(series,**kwargs):
+    fig=plt.figure()
+    axe=fig.add_subplot(111)
+    fnx=lambda s:np.array(list(v[1] for v in s),dtype="f8")
+    yax=np.row_stack(fnx(s) for s in series)
+    xax=np.arange(1917,2008)
+    polys=axe.stackplot(xax,yax)
+    axe.margins(0,0)
+
+    if 'ylabels'in kwargs:
+        axe.set_ylabel(kwargs['ylabel'])
+
+    if 'labels' in kwargs:
+        legendProxies=[]
+        for poly in polys:
+            legendProxies.append(plt.Rectangle(0,0),1,1,
+                                 fc=poly.get_factor()[0])
+
+    axe.legend([legendProxies,kwargs.get('labels')])
+
+    if 'title' in kwargs:
+        plt.title(kwargs['title'])
+
+    return fig
+
+def income_composition(source):
+    column=("Top 10% average income",
+        "Top 5% average income",
+        "Top 1% average income",
+        "Top 0.5% average income",
+        "Top 0.1% average income"
+    )
+
+    source=list(dataset(source))
+    labels=("Salary","Dividends","Internet","Rent","Business")
+
+    return stackedarea([timeseries(source,col)for col in column],labels=labels,title="U.S. Top 10% Income Composition",ylabel="Percentage")
+
+income_composition(data_file)
