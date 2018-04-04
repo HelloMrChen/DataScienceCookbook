@@ -59,7 +59,6 @@ ggplot(mpgByYr,aes(year,avgMPG))+geom_point()+geom_smooth()+xlab("Year")+ylab("A
 table(vehicles$fuelType1) #查看之后发现有很多非汽油动力在里边，数据有误
 
 #二、筛选出燃油车然后查看MPG趋势 
-
 gasCars<-subset(vehicles,fuelType1 %in%c("Regular Gasoline","Premium Gasoline","midgrade Gasoline")&fuelType2==""&atvType!="Hybrid")
 nrow(gasCars);nrow(vehicles)
 table(gasCars$fuelType1)  #注意table函数应用
