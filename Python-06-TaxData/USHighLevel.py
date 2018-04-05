@@ -119,8 +119,8 @@ def average_income(source):
     return linechart([timeseries(source,col)for col in column],labels=column,title="U.S Average Income",
                      ylabel="2008 US Dollars")
 
-# average_income(data_file)
-# plt.show()
+average_income(data_file)
+plt.show()
 
 #堆积图来分析富裕人群
 def stackedarea(series,**kwargs):
