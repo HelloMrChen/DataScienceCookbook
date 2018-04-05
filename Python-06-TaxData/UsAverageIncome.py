@@ -3,7 +3,7 @@ import numpy as np
 import jinja2
 import matplotlib as plt
 import matplotlib.pyplot as plt
-import csv
+import csv #处理csv文件常用的包
 
 data_file="./Data/income_dist.csv"
 

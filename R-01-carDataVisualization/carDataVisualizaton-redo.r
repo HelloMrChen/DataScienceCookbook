@@ -1,3 +1,6 @@
+library(ggplot2)
+library(plyr)
+
 setwd("/Users/gavinchen/我的文档/MBA养成记/2-自我提升/2-数据分析/程序练习/数据科学实战手册/R-01-carDataVisualization")
 
 #读取数据文件
